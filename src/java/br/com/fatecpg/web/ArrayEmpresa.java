@@ -5,10 +5,22 @@
  */
 package br.com.fatecpg.web;
 
+import java.util.ArrayList;
 /**
  *
  * @author Positivo
  */
 public class ArrayEmpresa {
+    private static ArrayList<Empresa> empresas;
     
+    public static ArrayList<Empresa> getEmpresas(){
+        if(empresas == null){
+        empresas = new ArrayList<>();
+        Empresa empresa1 = new Empresa();
+        empresa1.setDados("Jao", "Jao LTDA", "189921853", "12345678", "jao.com.br");
+        empresas.add(empresa1);        
+        }        
+        
+        return empresas;
+    }
 }
