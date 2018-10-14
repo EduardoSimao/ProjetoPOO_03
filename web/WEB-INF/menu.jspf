@@ -1,3 +1,39 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<h2>Hello World!</h2>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#"><h1>Grupo1</h1></a>
+    
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="home.jsp">Início</a>
+        </li>
+        <!-- Dropdown -->          
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Pessoas
+            </a>
+            <div class="dropdown-menu">            
+                <a class="dropdown-item" href="WEB-PESSOA/cadastrarPessoa.jsp">Cadastrar Pessoas</a>
+                <a class="dropdown-item" href="WEB-PESSOA/listarPessoa.jsp">Pesquisar Pessoas</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Empresas
+            </a>
+            <div class="dropdown-menu">            
+                <a class="dropdown-item" href="WEB-EMPRESA/cadastarEmpresa.jsp">Cadastrar Empresas</a>
+                <a class="dropdown-item" href="WEB-EMPRESA/listarEmpresa.jsp">Pesquisar Empresas</a>                              
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Veículos
+            </a>
+            <div class="dropdown-menu">            
+                <a class="dropdown-item" href="WEB-VEICULO/cadastarVeiculo.jsp">Cadastrar Veículos</a>
+                <a class="dropdown-item" href="WEB-VEICULO/listarVeiculo.jsp">Pesquisar Veículos</a>                            
+            </div>
+        </li>
+    </ul>    
+</nav>

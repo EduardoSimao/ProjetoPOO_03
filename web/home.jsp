@@ -9,9 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <%@include file="WEB-INF/links.jspf" %>
+        
+        <title>Início - Grupo 01</title>
     </head>
     <body>
+        <%@include  file="WEB-INF/menu.jspf"%>
+       
         <h1>Hello World!</h1>
+        
     </body>
 </html>
