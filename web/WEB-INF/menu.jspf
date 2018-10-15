@@ -5,16 +5,16 @@
     
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="home.jsp">Início</a>
+            <a class="nav-link" href="/home.jsp">Início</a>
         </li>
-        <!-- Dropdown -->          
+        <!-- Dropdown /ProjetoPOO03-->          
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                 Pessoas
             </a>
             <div class="dropdown-menu">            
-                <a class="dropdown-item" href="WEB-PESSOA/cadastrarPessoa.jsp">Cadastrar Pessoas</a>
-                <a class="dropdown-item" href="WEB-PESSOA/listarPessoa.jsp">Pesquisar Pessoas</a>
+                <a class="dropdown-item" href="/WEB-PESSOA/cadastrarPessoa.jsp">Cadastrar Pessoas</a>
+                <a class="dropdown-item" href="/WEB-PESSOA/listarPessoa.jsp">Pesquisar Pessoas</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -22,8 +22,8 @@
                 Empresas
             </a>
             <div class="dropdown-menu">            
-                <a class="dropdown-item" href="WEB-EMPRESA/cadastarEmpresa.jsp">Cadastrar Empresas</a>
-                <a class="dropdown-item" href="WEB-EMPRESA/listarEmpresa.jsp">Pesquisar Empresas</a>                              
+                <a class="dropdown-item" href="/WEB-EMPRESA/cadastarEmpresa.jsp">Cadastrar Empresas</a>
+                <a class="dropdown-item" href="/WEB-EMPRESA/listarEmpresa.jsp">Pesquisar Empresas</a>                              
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -31,8 +31,8 @@
                 Veículos
             </a>
             <div class="dropdown-menu">            
-                <a class="dropdown-item" href="WEB-VEICULO/cadastarVeiculo.jsp">Cadastrar Veículos</a>
-                <a class="dropdown-item" href="WEB-VEICULO/listarVeiculo.jsp">Pesquisar Veículos</a>                            
+                <a class="dropdown-item" href="/WEB-VEICULO/cadastarVeiculo.jsp">Cadastrar Veículos</a>
+                <a class="dropdown-item" href="/WEB-VEICULO/listarVeiculo.jsp">Pesquisar Veículos</a>                            
             </div>
         </li>
     </ul>    
