@@ -18,15 +18,15 @@
         <h1>Lista de Veiculos</h1>
         <table class="table">
             <thead class="thead-dark">
-            <tr>
-                <th>ID</th>
-                <th>Placa</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Cor</th>
-            </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Placa</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Cor</th>
+                </tr>
             </thead>
-            <%for(Veiculo v: ArrayVeiculo.getVeiculos()){%>
+            <%for (Veiculo v : ArrayVeiculo.getVeiculos()) {%>
             <%int i = ArrayVeiculo.getVeiculos().indexOf(v);%>
             <tr>
                 <td><%=i%></td>
@@ -35,7 +35,8 @@
                 <td><%=v.getModelo()%></td>
                 <td><%=v.getCor()%></td>
                 <td>
-                    
+                    <a href="alterarVeiculo.jsp?i=<%=i%>"><button>Alterar</button></a>
+                    <a href="excluirVeiculo.jsp?i=<%=i%>"><button>Excluir</button></a>
                 </td>
             </tr>
             <%}%>

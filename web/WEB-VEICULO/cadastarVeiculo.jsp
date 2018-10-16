@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="form-group">
-                   <label>Marca:</label></br>
+                    <label>Marca:</label></br>
                     <input type="text" name="marca"/><br/>
                 </div>
 
