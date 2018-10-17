@@ -35,19 +35,19 @@
                 <input type="hidden" name="i" value="<%=i%>"/>
                 <div class="form-group">
                     <label>Placa:</label></br>
-                    <input type="text" name="nome" value="<%=v.getPlaca()%>"/><br/>
+                    <input type="text" name="placa" value="<%=v.getPlaca()%>"/><br/>
                 </div>
                 <div class="form-group">
                     <label>Marca:</label></br>
-                    <input type="text" name="email" value="<%=v.getMarca()%>"/><br/>
+                    <input type="text" name="marca" value="<%=v.getMarca()%>"/><br/>
                 </div>
                 <div class="form-group">
                     <label>Modelo:</label></br>
-                    <input type="text" name="telefone" value="<%=v.getModelo()%>"/><br/>
+                    <input type="text" name="modelo" value="<%=v.getModelo()%>"/><br/>
                 </div>
                 <div class="form-group">
                     <label>Cor:</label></br>
-                    <input type="text" name="telefone" value="<%=v.getCor()%>"/><br/>
+                    <input type="text" name="cor" value="<%=v.getCor()%>"/><br/>
                 </div>
                 <br/>
                 <input type="submit" name="alterar" value="Alterar"/>            
