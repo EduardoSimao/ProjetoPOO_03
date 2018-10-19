@@ -15,31 +15,36 @@
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
-        <h1>Lista de Veiculos</h1>
-        <table class="table">
-            <thead class="thead-dark">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4"> Listar Veículos </h1>
+        </div>
+        
+        <div class="container">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Placa</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Cor</th>
+                    </tr>
+                </thead>
+                <%for (Veiculo v : ArrayVeiculo.getVeiculos()) {%>
+                <%int i = ArrayVeiculo.getVeiculos().indexOf(v);%>
                 <tr>
-                    <th>ID</th>
-                    <th>Placa</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Cor</th>
+                    <td><%=i%></td>
+                    <td><%=v.getPlaca()%></td>
+                    <td><%=v.getMarca()%></td>
+                    <td><%=v.getModelo()%></td>
+                    <td><%=v.getCor()%></td>
+                    <td>
+                        <a href="alterarVeiculo.jsp?i=<%=i%>"><button type="button" class="btn btn-light">Alterar</button></a>
+                        <a href="excluirVeiculo.jsp?i=<%=i%>"><button type="button" class="btn btn-dark">Excluir</button></a>
+                    </td>
                 </tr>
-            </thead>
-            <%for (Veiculo v : ArrayVeiculo.getVeiculos()) {%>
-            <%int i = ArrayVeiculo.getVeiculos().indexOf(v);%>
-            <tr>
-                <td><%=i%></td>
-                <td><%=v.getPlaca()%></td>
-                <td><%=v.getMarca()%></td>
-                <td><%=v.getModelo()%></td>
-                <td><%=v.getCor()%></td>
-                <td>
-                    <a href="alterarVeiculo.jsp?i=<%=i%>"><button>Alterar</button></a>
-                    <a href="excluirVeiculo.jsp?i=<%=i%>"><button>Excluir</button></a>
-                </td>
-            </tr>
-            <%}%>
-        </table>
+                <%}%>
+            </table>
+        </div>
     </body>
 </html>

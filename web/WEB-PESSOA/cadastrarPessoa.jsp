@@ -16,8 +16,9 @@
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
-        <div class="text-center " >      
-            <h1>Cadastro de Veículos</h1>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4"> Cadastrar Pessoa </h1>
+        </div>
             <%
                 if (request.getParameter("cadastrar") != null) {
                     String nome = request.getParameter("nome");
@@ -30,29 +31,34 @@
                     response.sendRedirect("listarPessoa.jsp");
                 }
             %>
-            <form>
-                <div class="form-group">
-                    <label>Nome:</label></br>  
-                    <input type="text" name="nome" required/><br/>
+            <form class="container">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="inputNome">Nome</label>
+                  <input type="text" class="form-control" name="nome" placeholder="Nome">
                 </div>
 
-                <div class="form-group">
-                    <label>CPF</label></br>
-                    <input type="text" name="cpf" pattern="[0-9]+$" required/><br/>
+                <div class="form-group col-md-6">
+                  <label for="inputCPF">CPF</label>
+                  <input type="text" class="form-control" name="cpf" placeholder="CPF">
                 </div>
-
-                <div class="form-group">
-                    <label>Email:</label></br>
-                    <input type="text" name="email" required/><br/>
+                                
+                <div class="form-group col-md-6">
+                  <label for="inputTelefone">Telefone</label>
+                  <input type="text" class="form-control" name="telefone" placeholder="Telefone">
                 </div>
-
-                <div class="form-group">
-                    <label>Telefone</label></br>
-                    <input type="text" name="telefone" pattern="[0-9]+$" required/><br/>
-                    <br/>
+                
+                <div class="form-group col-md-12">
+                  <label for="inputEmail">E-mail</label>
+                  <input type="text" class="form-control" name="email" placeholder="E-mail">
                 </div>
-                <input class="btn btn-dark" type="submit" name="cadastrar" value="Cadastrar"/>            
-            </form>
-        </div>
+            </div> 
+         
+            <center>
+                <button type="submit" class="btn btn-dark" name="cadastrar">Cadastrar</button>
+                <a href="../home.jsp"><button type="button" class="btn btn-dark">Cancelar</button></a>
+            </center>       
+            
+          </form>
     </body>
 </html>

@@ -16,8 +16,9 @@
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
-        <div class="text-center " > 
-            <h1>Excluir Pessoa</h1>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4"> Excluir Pessoa </h1>
+        </div>
             <%
                 int i = Integer.parseInt(request.getParameter("i"));
                 Pessoa p = ArrayPessoa.getPessoas().get(i);
@@ -26,21 +27,40 @@
                     response.sendRedirect("listarPessoa.jsp");
                 }
             %>
-            <form>
-                Índice: </br>
-                <b><%= i%></b><br/>
-                <input type="hidden" name="i" value="<%=i%>"/>
-                Placa: <br/>
-                <b><%=p.getNome()%>"</b><br/>
-                Marca: <br/>
-                <b><%=p.getCpf()%>"</b><br/>
-                Modelo: <br/>
-                <b><%=p.getEmail()%>"</b><br/>
-                Cor: <br/>
-                <b><%=p.getTelefone()%>"</b><br/>
-                <br/>
-                <input type="submit" name="excluir" value="Confirmar exclusão"/>            
-            </form>
-        </div>
+            <form class="container">
+                
+                <center><b>Índice: <%=i%></b></center><br/>
+
+                <div class="form-row"> 
+
+                    <div class="form-group col-md-6">
+                      <label for="inputNome">Nome</label>
+                      <input type="text" disabled class="form-control" name="nome" value="<%=p.getNome()%>" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label for="inputCPF">CPF</label>
+                      <input type="text" disabled class="form-control" name="cpf"  value="<%=p.getCpf()%>" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label for="inputTelefone">Telefone</label>
+                      <input type="text" disabled class="form-control" name="telefone" value="<%=p.getTelefone()%>" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail">E-mail</label>
+                      <input type="text" disabled class="form-control" name="email" value="<%=p.getEmail()%>" />
+                    </div>
+                </div> 
+                <div class="form-group">
+                      <input type="hidden" class="form-control" name="i" value="<%=i%>" />
+                </div>
+                <center>
+                <input type="submit" class="btn btn-dark" name="excluir" value="Confirmar exclusão"/>
+                    <a href="../home.jsp"><button type="button" class="btn btn-dark">Cancelar</button></a>
+                </center>           
+          </form>
+        
     </body>
 </html>
