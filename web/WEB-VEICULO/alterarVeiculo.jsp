@@ -15,8 +15,9 @@
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
-        <div class="text-center " > 
-            <h1>Alterar dados do Veiculo</h1>
+         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4"> Alterar Veículo </h1>
+        </div>
             <%
                 int i = Integer.parseInt(request.getParameter("i"));
                 Veiculo v = ArrayVeiculo.getVeiculos().get(i);
@@ -30,28 +31,39 @@
                     response.sendRedirect("listarVeiculo.jsp");
                 }
             %>
-            <form>
-                <b>Índice: <%= i%></b><br/>
-                <input type="hidden" name="i" value="<%=i%>"/>
+            <form class="container">
+                
+                <center><b>Índice: <%=i%></b></center><br/>
+
+                <div class="form-row"> 
+
+                    <div class="form-group col-md-6">
+                      <label>Placa</label>
+                      <input type="text" class="form-control" name="placa" value="<%=v.getPlaca()%>" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label>Marca</label>
+                      <input type="text" class="form-control" name="marca"  value="<%=v.getMarca()%>" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label> Modelo</label>
+                      <input type="text" class="form-control" name="modelo" value="<%=v.getModelo()%>" />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label>Cor</label>
+                      <input type="text" class="form-control" name="cor" value="<%=v.getCor()%>" />
+                    </div>
+                </div> 
                 <div class="form-group">
-                    <label>Placa:</label></br>
-                    <input type="text" name="placa" value="<%=v.getPlaca()%>"/><br/>
+                      <input type="hidden" class="form-control" name="i" value="<%=i%>" />
                 </div>
-                <div class="form-group">
-                    <label>Marca:</label></br>
-                    <input type="text" name="marca" value="<%=v.getMarca()%>"/><br/>
-                </div>
-                <div class="form-group">
-                    <label>Modelo:</label></br>
-                    <input type="text" name="modelo" value="<%=v.getModelo()%>"/><br/>
-                </div>
-                <div class="form-group">
-                    <label>Cor:</label></br>
-                    <input type="text" name="cor" value="<%=v.getCor()%>"/><br/>
-                </div>
-                <br/>
-                <input type="submit" name="alterar" value="Alterar"/>            
-            </form>
-        </div>
+                <center>
+                    <input type="submit" class="btn btn-dark" name="alterar" value="Alterar" />
+                    <a href="../home.jsp"><button type="button" class="btn btn-dark">Cancelar</button></a>
+                </center>           
+          </form>
     </body>
 </html>

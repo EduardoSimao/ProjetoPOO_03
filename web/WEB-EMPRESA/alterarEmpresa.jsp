@@ -15,8 +15,9 @@
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
-        <div class="text-center " > 
-        <h1>Alterar Empresas</h1>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4"> Alterar Empresa </h1>
+        </div>
         
         <%
             int i = Integer.parseInt(request.getParameter("i"));
@@ -32,21 +33,41 @@
               response.sendRedirect("listarEmpresa.jsp");
         }
         %>
-        <form>
-            <b>Índice: <%= i %></b><br/>
-            <input type="hidden" name="i" value="<%=i%>"/>
-            Nome: <br/>
-            <input type="text" name="nome" value="<%=e.getNome()%>"/><br/>
-            Razão Social: <br/>
-            <input type="text" name="razaoSocial" value="<%=e.getRazaoSocial()%>"/><br/>
-            CNPJ: <br/>
-            <input type="text" name="cnpj" value="<%=e.getCnpj()%>"/><br/>
-            Telefone: <br/>
-            <input type="text" name="telefone" value="<%=e.getTelefone()%>"/><br/>
-            Website: <br/>
-            <input type="text" name="website" value="<%=e.getWebsite()%>"/><br/>
-            <br/>
-            <input type="submit" name="alterar" value="Alterar"/>            
-        </form>
+        <form class="container">
+            <center><b>Índice: <%=i%></b></center><br/>
+            <div class="form-row">                 
+                <div class="form-group col-md-6">
+                  <label for="inputNome">Nome</label>
+                  <input type="text" class="form-control" name="nome" value="<%=e.getNome()%>" />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="inputRazaoSocial">Razão Social</label>
+                  <input type="text" class="form-control" name="razaoSocial" value="<%=e.getRazaoSocial()%>" />
+                </div>
+                
+                <div class="form-group col-md-6">
+                  <label for="inputCNPJ">CNPJ</label>
+                  <input type="text" class="form-control" name="cnpj" value="<%=e.getCnpj()%>" />
+                </div>
+                
+                <div class="form-group col-md-6">
+                  <label for="inputTelefone">Telefone</label>
+                  <input type="text" class="form-control" name="telefone" value="<%=e.getTelefone()%>" />
+                </div>
+                
+                <div class="form-group col-md-12">
+                  <label for="inputWebsite">Website</label>
+                  <input type="text" class="form-control" name="website" value="<%=e.getWebsite()%>" />
+                </div>
+            </div> 
+            <div class="form-group">
+                  <input type="hidden" class="form-control" name="i" value="<%=i%>" />
+            </div>
+            <center>
+                <input type="submit" class="btn btn-dark" name="alterar" value="Alterar" />
+                <a href="../home.jsp"><button type="button" class="btn btn-dark">Cancelar</button></a>
+            </center>           
+          </form>
     </body>
 </html>

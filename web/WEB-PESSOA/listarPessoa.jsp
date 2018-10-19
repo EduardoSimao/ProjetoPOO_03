@@ -16,31 +16,36 @@
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
-        <h1>Lista de Pessoas</h1>
-        <table class="table">
-            <thead class="thead-dark">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4"> Listar Pessoas </h1>
+        </div>
+        
+        <div class="container">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Cpf</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <%for (Pessoa p : ArrayPessoa.getPessoas()) {%>
+                <%int i = ArrayPessoa.getPessoas().indexOf(p);%>
                 <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Cpf</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
+                    <td><%=i%></td>
+                    <td><%=p.getNome()%></td>
+                    <td><%=p.getCpf()%></td>
+                    <td><%=p.getEmail()%></td>
+                    <td><%=p.getTelefone()%></td>
+                    <td>
+                        <a href="alterarPessoa.jsp?i=<%=i%>"><button type="button" class="btn btn-light">Alterar</button></a>
+                        <a href="excluirPessoa.jsp?i=<%=i%>"><button type="button" class="btn btn-dark">Excluir</button></a>
+                    </td>
                 </tr>
-            </thead>
-            <%for (Pessoa p : ArrayPessoa.getPessoas()) {%>
-            <%int i = ArrayPessoa.getPessoas().indexOf(p);%>
-            <tr>
-                <td><%=i%></td>
-                <td><%=p.getNome()%></td>
-                <td><%=p.getCpf()%></td>
-                <td><%=p.getEmail()%></td>
-                <td><%=p.getTelefone()%></td>
-                <td>
-                    <a href="alterarPessoa.jsp?i=<%=i%>"><button>Alterar</button></a>
-                    <a href="excluirPessoa.jsp?i=<%=i%>"><button>Excluir</button></a>
-                </td>
-            </tr>
-            <%}%>
-        </table>
+                <%}%>
+            </table>
+        </div>
     </body>
 </html>
