@@ -26,17 +26,26 @@
                 }
             %>
             <form>
-                Índice: </br>
-                <b><%= i%></b><br/>
+                <div class="form-group">
+                <label><b>Índice: <%= i%></b> </label></br>
                 <input type="hidden" name="i" value="<%=i%>"/>
-                Placa: <br/>
-                <b><%=v.getPlaca()%>"</b><br/>
-                Marca: <br/>
-                <b><%=v.getMarca()%>"</b><br/>
-                Modelo: <br/>
-                <b><%=v.getModelo()%>"</b><br/>
-                Cor: <br/>
-                <b><%=v.getCor()%>"</b><br/>
+                </div>
+                <div class="form-group">
+                    <label>Placa:</label></br>
+                    <input type="text" disabled name="placa" value="<%=v.getPlaca()%>"/><br/>
+                </div> 
+                <div class="form-group">
+                    <label>Marca:</label></br>
+                    <input type="text"  disabled name="marca" value="<%=v.getMarca()%>"/><br/>
+                </div>  
+                <div class="form-group">
+                    <label>Modelo:</label></br>
+                    <input type="text" disabled name="modelo" value="<%=v.getModelo()%>"/><br/>
+                </div> 
+                <div class="form-group">
+                    <label>Cor:</label></br>
+                    <input type="text" disabled name="cor" value="<%=v.getCor()%>"/><br/>
+                </div>
                 <br/>
                 <input type="submit" name="excluir" value="Confirmar exclusão"/>            
             </form>

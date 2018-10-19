@@ -31,8 +31,10 @@
                 }
             %>
             <form>
-                <b>Índice: <%= i%></b><br/>
+                <div class="form-group">
+                <label><b>Índice: <%= i%></b> </label></br>
                 <input type="hidden" name="i" value="<%=i%>"/>
+                </div>
                 <div class="form-group">
                     <label>Placa:</label></br>
                     <input type="text" name="placa" value="<%=v.getPlaca()%>"/><br/>
