@@ -59,7 +59,7 @@
   <div id="extra" class="container">
     <h2>TP-03 Professor Pupo</h2>
     <span>Fatec Centro Paula Souza</span> 
-    <p>Esta apricação tem como finalidade executar o cadastro de Pessoas,Empresas e Veiculos. Assim como a manutenção dos mesmos(Excluir,Adicionar e Editar</p>
+    <p>Esta apricação tem como finalidade executar o cadastro de Pessoas,Empresas e Veiculos. Assim como a manutenção dos mesmos(Excluir,Adicionar e Editar)</p>
 
     <a href="https://github.com/EduardoSimao/ProjetoPOO_03" class="button">Git-Hub</a> </div>
 </div>
