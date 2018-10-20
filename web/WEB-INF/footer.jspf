@@ -1,7 +1,19 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
+<style>
+    .cor {
+       color: white;
+    }
+    .footer{
+        width: 100%;
+        height: 50px;
+        margin: auto;
+        bottom: 0;
+        position: fixed;
+    }   
+</style>
 <footer>
-  <div id="copyright" class="container">
-  <p>&copy; Untitled. All rights reserved. | Grupo 1 | Praia Grande 2018</p>
+  <div id="copyright" class="footer footer-copyright text-center py-3 bg-dark">
+      <p class="cor">&copy; Untitled. All rights reserved. | Grupo 1 | Praia Grande 2018</p>
 </div>
 </footer>

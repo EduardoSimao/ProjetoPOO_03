@@ -11,7 +11,7 @@
     <head>
         <%@include file="../WEB-INF/links.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Grupo 1 - Listar Veículos</title>
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
@@ -28,6 +28,8 @@
                         <th>Marca</th>
                         <th>Modelo</th>
                         <th>Cor</th>
+                        <th>Comandos</th>
+
                     </tr>
                 </thead>
                 <%for (Veiculo v : ArrayVeiculo.getVeiculos()) {%>
@@ -47,4 +49,5 @@
             </table>
         </div>
     </body>
+    <%@include file="../WEB-INF/footer.jspf" %>
 </html>

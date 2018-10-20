@@ -11,7 +11,7 @@
     <head>
         <%@include file="../WEB-INF/links.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page </title>
+        <title>Grupo 1 - Cadastrar Empresa</title>
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
@@ -56,13 +56,15 @@
                 
                 <div class="form-group col-md-12">
                   <label for="inputWebsite">Website</label>
-                  <input type="text" class="form-control" name="website" placeholder="website">
+                  <input type="text" class="form-control" name="website" placeholder="Website">
                 </div>
             </div> 
                 <center>
                     <button type="submit" class="btn btn-dark" name="inserir">Cadastrar</button>
                     <a href="../home.jsp"><button type="button" class="btn btn-dark">Cancelar</button></a>
                 </center>
+            <br>
           </form>
     </body>
+    <%@include file="../WEB-INF/footer.jspf" %>
 </html>

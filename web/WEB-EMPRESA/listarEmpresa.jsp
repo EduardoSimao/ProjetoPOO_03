@@ -12,7 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%@include file="/WEB-INF/links.jspf" %>
-        <title>Empresa - Listar</title>
+        <title>Grupo 1 - Listar Empresas</title>
     </head>
     <body>
         <%@include file="/WEB-INF/menu.jspf" %>
@@ -56,4 +56,5 @@
             </table>
         </div>
     </body>
+    <%@include file="../WEB-INF/footer.jspf" %>
 </html>

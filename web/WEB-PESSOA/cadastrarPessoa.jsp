@@ -12,7 +12,7 @@
     <head>
         <%@include file="../WEB-INF/links.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Grupo 1 - Cadastrar Pessoa</title>
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
@@ -33,7 +33,7 @@
             %>
             <form class="container">
             <div class="form-row">
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-6">
                   <label for="inputNome">Nome</label>
                   <input type="text" class="form-control" name="nome" placeholder="Nome">
                 </div>
@@ -48,9 +48,9 @@
                   <input type="text" class="form-control" name="telefone" placeholder="Telefone">
                 </div>
                 
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-6">
                   <label for="inputEmail">E-mail</label>
-                  <input type="text" class="form-control" name="email" placeholder="E-mail">
+                  <input type="email" class="form-control" name="email" placeholder="E-mail">
                 </div>
             </div> 
          
@@ -58,7 +58,8 @@
                 <button type="submit" class="btn btn-dark" name="cadastrar">Cadastrar</button>
                 <a href="../home.jsp"><button type="button" class="btn btn-dark">Cancelar</button></a>
             </center>       
-            
+                <br>
           </form>
     </body>
+    <%@include file="../WEB-INF/footer.jspf" %>
 </html>

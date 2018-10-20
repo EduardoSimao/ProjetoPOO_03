@@ -12,7 +12,7 @@
     <head>
         <%@include file="../WEB-INF/links.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Grupo 1 - Listar Pessoas</title>
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
@@ -29,6 +29,7 @@
                         <th>Cpf</th>
                         <th>Email</th>
                         <th>Telefone</th>
+                        <th>Comandos</th>
                     </tr>
                 </thead>
                 <%for (Pessoa p : ArrayPessoa.getPessoas()) {%>
@@ -48,4 +49,5 @@
             </table>
         </div>
     </body>
+    <%@include file="../WEB-INF/footer.jspf" %>
 </html>

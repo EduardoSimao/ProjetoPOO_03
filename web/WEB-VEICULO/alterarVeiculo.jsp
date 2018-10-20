@@ -11,7 +11,7 @@
     <head>
         <%@include file="../WEB-INF/links.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Grupo 1 - Alterar Veículo</title>
     </head>
     <body>
         <%@include  file="../WEB-INF/menu.jspf"%>
@@ -64,7 +64,9 @@
             <center>
                 <input type="submit" class="btn btn-dark" name="alterar" value="Alterar" />
                 <a href="../home.jsp"><button type="button" class="btn btn-dark">Cancelar</button></a>
-            </center>           
+            </center> 
+            <br>
         </form>
     </body>
+    <%@include file="../WEB-INF/footer.jspf" %>
 </html>
