@@ -14,7 +14,7 @@
         <%@include file="/WEB-INF/links.jspf" %>
         <title>Grupo 1 - Listar Empresas</title>
     </head>
-    <body>
+    <body style="padding-bottom: 30px;">
         <%@include file="/WEB-INF/menu.jspf" %>
         
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -53,8 +53,10 @@
                     <tr>
                 </tbody>
                 <%}%>
-            </table>
+            </table><br>
+        </div>
+        <div>
+           <%@include  file="../WEB-INF/footer.jspf"%>
         </div>
     </body>
-    <%@include file="../WEB-INF/footer.jspf" %>
 </html>

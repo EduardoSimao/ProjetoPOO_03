@@ -13,7 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Grupo 1 - Excluir Empresa</title>
     </head>
-    <body>
+    <body style="padding-bottom: 30px;">
         <%@include  file="../WEB-INF/menu.jspf"%>
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-4"> Excluir Empresa </h1>
@@ -64,6 +64,8 @@
             </center>
             <br>
          </form>
+        <div>
+            <%@include  file="../WEB-INF/footer.jspf"%>
+        </div>
     </body>
-    <%@include file="../WEB-INF/footer.jspf" %>
 </html>
